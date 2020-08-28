@@ -16,7 +16,7 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
 1. Microsocks for socks proxy (ip:9118)
 1. Stubby for dns-over-tls client (ip:53 or 127.2.2.2:53 or 127.2.2.2:5253)
 1. A new IP every docker start (i.e. random ovpn picker, multiple ovpn files required e.g. [PIA ovpn files](https://www.privateinternetaccess.com/openvpn/openvpn.zip))
-1. Minor fixes
+1. Minor / cosmetic fixes
 
 ## Usage
     docker run -d \
@@ -43,12 +43,12 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
         -e UMASK=<umask for created files> \
         -e PUID=<uid for user> \
         -e PGID=<gid for user> \
-        testdasi/ovpn-plus-plus
+        testdasi/openvpn-plus-plus
 
 ## PIA Example
     docker run -d\
         --cap-add=NET_ADMIN \
-		--name='openvpn-plus-plus'\
+        --name='openvpn-plus-plus'\
         --net='bridge'\
         -e TZ="Europe/London"\
         -e 'VPN_ENABLED'='yes'\
@@ -75,5 +75,4 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
         'testdasi/openvpn-plus-plus'
 
 ## Notes
-I code for fun and my personal uses; hence, these niche functionalties that nobody asks for. ;)
-Tested exclusively with [PIA ovpn files](https://www.privateinternetaccess.com/openvpn/openvpn.zip)
+I code for fun and my personal uses; hence, these niche functionalties that nobody asks for. ;) Tested exclusively with [PIA ovpn files](https://www.privateinternetaccess.com/openvpn/openvpn.zip)
