@@ -46,30 +46,33 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
         testdasi/ovpn-plus-plus
 
 ## PIA Example
-    docker run -d \
+    docker run -d\
         --cap-add=NET_ADMIN \
-        -p 8118:8118 \
-        -p 9118:9118 \
-        -p 53:53 \
-        --name=openvpn-plus-plus \
-        -v /root/docker/config:/config \
-        -v /etc/localtime:/etc/localtime:ro \
-        -e VPN_ENABLED=yes \
-        -e VPN_USER=myusername \
-        -e VPN_PASS=mypassword \
-        -e VPN_PROV=pia \
-        -e LAN_NETWORK=192.168.1.0/24 \
-        -e NAME_SERVERS=127.2.2.2 \
-        -e SOCKS_USER=admin \
-        -e SOCKS_PASS=socks \
-        -e ENABLE_SOCKS=yes \
-        -e ENABLE_PRIVOXY=yes \
-        -e ADDITIONAL_PORTS=1234 \
-        -e DEBUG=false \
-        -e UMASK=000 \
-        -e PUID=0 \
-        -e PGID=0 \
-        testdasi/ovpn-plus-plus
+		--name='openvpn-plus-plus'\
+        --net='bridge'\
+        -e TZ="Europe/London"\
+        -e 'VPN_ENABLED'='yes'\
+        -e 'ENABLE_SOCKS'='yes'\
+        -e 'ENABLE_PRIVOXY'='yes'\
+        -e 'VPN_USER'='user'\
+        -e 'VPN_PASS'='password'\
+        -e 'VPN_PROV'='pia'\
+        -e 'VPN_OPTIONS'=''\
+        -e 'LAN_NETWORK'='192.168.0.1/24'\
+        -e 'NAME_SERVERS'='127.2.2.2'\
+        -e 'SOCKS_USER'='user'\
+        -e 'SOCKS_PASS'='password'\
+        -e 'ADDITIONAL_PORTS'=''\
+        -e 'DEBUG'='false'\
+        -e 'UMASK'='000'\
+        -e 'PUID'='99'\
+        -e 'PGID'='100'\
+        -p '8118:8118/tcp'\
+        -p '9118:9118/tcp'\
+        -p '53:53/tcp'\
+        -p '53:53/udp'\
+        -v '/root/docker/config/openvpn-plus-plus':'/config':'rw'\
+		'testdasi/openvpn-plus-plus'
 
 ## Notes
 I code for fun and my personal uses; hence, these niche functionalties that nobody asks for. ;)
