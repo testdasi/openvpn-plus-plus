@@ -3,7 +3,8 @@ OpenVPN client with http proxy, socks proxy, dns-over-tls and a random ovpn pick
 
 ## High-level instructions
 * Run docker - first run will stop itself due to missing ovpn file
-* Place your ovpn files in the host location that is mapped to */config/ovpn_files*
+* Copy / extract your ovpn files in the host path that is mapped to */config/ovpn_files* (at least 1 file is required, must have .ovpn extension)
+* If there are separate cert files (crt + pem), place them in host location path that is mapped to */config/ovpn*
 * Start docker again
 
 ## Credit
