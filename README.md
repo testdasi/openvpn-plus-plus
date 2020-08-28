@@ -1,6 +1,11 @@
 # ovpn-plus-plus
 OpenVPN client with http proxy, socks proxy, dns-over-tls and a random ovpn picker.
 
+## High-level instructions
+* Run docker - first run will stop itself due to missing ovpn file
+* Place your ovpn files in the host location that is mapped to */config/ovpn_files*
+* Start docker again
+
 ## Credit
 Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvpn).
 
