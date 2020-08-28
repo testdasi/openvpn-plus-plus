@@ -72,7 +72,7 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
         -p '53:53/tcp'\
         -p '53:53/udp'\
         -v '/root/docker/config/openvpn-plus-plus':'/config':'rw'\
-	'testdasi/openvpn-plus-plus'
+        'testdasi/openvpn-plus-plus'
 
 ## Notes
 I code for fun and my personal uses; hence, these niche functionalties that nobody asks for. ;)
