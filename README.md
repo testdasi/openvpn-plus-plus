@@ -12,9 +12,9 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
 
 ## Key features
 1. OpenVPN client to connect to your favourite VPN provider
-1. Privoxy for http proxy (<ip>:8118)
-1. Microsocks for socks proxy (<ip>:9118)
-1. Stubby for dns-over-tls client (<ip>:53 or 127.2.2.2:53 or 127.2.2.2:5253)
+1. Privoxy for http proxy (ip:8118)
+1. Microsocks for socks proxy (ip:9118)
+1. Stubby for dns-over-tls client (ip:53 or 127.2.2.2:53 or 127.2.2.2:5253)
 1. A new IP every docker start (i.e. random ovpn picker, multiple ovpn files required e.g. [PIA ovpn files](https://www.privateinternetaccess.com/openvpn/openvpn.zip))
 1. Minor fixes
 
