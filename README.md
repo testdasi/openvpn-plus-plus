@@ -17,6 +17,7 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
         --cap-add=NET_ADMIN \
         -p 8118:8118 \
         -p 9118:9118 \
+        -p 53:53 \
         --name=<container name> \
         -v <path for config files>:/config \
         -v /etc/localtime:/etc/localtime:ro \
