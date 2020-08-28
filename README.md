@@ -45,7 +45,7 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
         -e PGID=<gid for user> \
         testdasi/openvpn-plus-plus
 
-## PIA Example
+## Unraid + PIA Example
     docker run -d\
         --cap-add=NET_ADMIN \
         --name='openvpn-plus-plus'\
@@ -71,8 +71,10 @@ Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvp
         -p '9118:9118/tcp'\
         -p '53:53/tcp'\
         -p '53:53/udp'\
-        -v '/root/docker/config/openvpn-plus-plus':'/config':'rw'\
+        -v '/mnt/user/appdata/openvpn-plus-plus':'/config':'rw'\
         'testdasi/openvpn-plus-plus'
 
 ## Notes
-I code for fun and my personal uses; hence, these niche functionalties that nobody asks for. ;) Tested exclusively with [PIA ovpn files](https://www.privateinternetaccess.com/openvpn/openvpn.zip)
+* I code for fun and my personal uses; hence, these niche functionalties that nobody asks for. ;)
+* Tested exclusively with [PIA ovpn files](https://www.privateinternetaccess.com/openvpn/openvpn.zip)
+* Intended to be used with Unraid but would work in other x86/amd64 environments too.
