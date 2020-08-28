@@ -4,7 +4,7 @@ OpenVPN client with http proxy, socks proxy, dns-over-tls and a random ovpn pick
 ## Credit
 Based on [binhex/arch-privoxyvpn](https://hub.docker.com/r/binhex/arch-privoxyvpn).
 
-## Key applications
+## Key features
 1. OpenVPN client to connect to your favourite VPN provider
 1. Privoxy for http proxy (<ip>:8118)
 1. Microsocks for socks proxy (<ip>:9118)
