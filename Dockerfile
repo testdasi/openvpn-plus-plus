@@ -12,7 +12,6 @@ ADD stuff /temp
 EXPOSE 53/tcp
 EXPOSE 53/udp
 EXPOSE 9118/tcp
-EXPOSE 9118/udp
 
 # run init script
 CMD ["/bin/bash", "/temp/startup.sh"]
