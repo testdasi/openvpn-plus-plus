@@ -1,15 +1,11 @@
 FROM binhex/arch-privoxyvpn:latest
 
-# install stubby to enable DNS-over-TLS
+# install stubby, stubby
 RUN pacman -Syu \
-    && pacman -S --noconfirm stubby
+    && pacman -S --noconfirm stubby \
+    && rm -f /etc/stubby/stubby.yml \
+    && mkdir -p /temp
 
-# clean stubby config
-RUN mkdir -p /etc/stubby \
-    && rm -f /etc/stubby/stubby.yml
-
-# install stubby config
-RUN mkdir -p /temp
 ADD stuff /temp
 
 #Expose port
